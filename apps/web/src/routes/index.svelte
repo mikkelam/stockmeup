@@ -1,9 +1,9 @@
 <script context="module">
 	import Content from '$lib/Content.svelte';
-	import prisma from '$lib/prisma';
 	export async function load({ error, status, fetch }) {
 		const resp = await fetch('/api/store.json');
 		const json = await resp.json();
+
 		return {
 			props: {
 				stores: json

@@ -1,4 +1,5 @@
-import { PrismaClient, Prisma } from '@prisma/client'
+
+import { PrismaClient, Prisma } from "@stockmeup/db";
 
 const _store = Prisma.validator<Prisma.StoreArgs>()({});
 type Store = Prisma.StoreGetPayload<typeof _store>
