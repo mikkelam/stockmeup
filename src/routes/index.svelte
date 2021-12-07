@@ -1,12 +1,23 @@
 <script context="module">
+	import Content from '$lib/Content.svelte';
 	import prisma from '$lib/prisma';
-	export function load({ error, status }) {
+	export async function load({ error, status, fetch }) {
+		const resp = await fetch('/api/store.json');
+		const json = await resp.json();
 		return {
 			props: {
-				title: `${status}: ${error}`
+				stores: json
 			}
 		};
 	}
 </script>
 
-<h1>Stockmeup</h1>
+<script lang="ts">
+	export let stores;
+	console.log(stores);
+	
+</script>
+
+<Content>
+	<h1>Stockmeup</h1>
+</Content>

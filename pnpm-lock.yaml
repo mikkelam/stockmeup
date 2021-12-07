@@ -1,13 +1,12 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@prisma/client': ^3.5.0
+  '@prisma/client': ^3.6.0
   '@sveltejs/kit': next
   '@tailwindcss/typography': ^0.4.1
   '@typescript-eslint/eslint-plugin': ^4.31.1
   '@typescript-eslint/parser': ^4.31.1
   autoprefixer: ^10.3.7
-  client@3.5.0: link:prisma/client@3.5.0
   cssnano: ^5.0.8
   daisyui: ^1.16.2
   eslint: ^7.32.0
@@ -17,7 +16,7 @@ specifiers:
   postcss-load-config: ^3.1.0
   prettier: ^2.4.1
   prettier-plugin-svelte: ^2.5.0
-  prisma: 3.5.0
+  prisma: 3.6.0
   svelte: ^3.42.6
   svelte-check: ^2.2.6
   svelte-preprocess: ^4.9.8
@@ -26,14 +25,15 @@ specifiers:
   tslib: ^2.3.1
   typescript: ^4.4.3
 
+dependencies:
+  '@prisma/client': 3.6.0_prisma@3.6.0
+
 devDependencies:
-  '@prisma/client': 3.5.0_prisma@3.5.0
   '@sveltejs/kit': 1.0.0-next.201_svelte@3.44.2
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
   '@typescript-eslint/eslint-plugin': 4.33.0_d00b196ac5df1286ea7e45797bebddbc
   '@typescript-eslint/parser': 4.33.0_eslint@7.32.0+typescript@4.5.2
   autoprefixer: 10.4.0_postcss@8.3.11
-  client@3.5.0: link:prisma/client@3.5.0
   cssnano: 5.0.11_postcss@8.3.11
   daisyui: 1.16.2
   eslint: 7.32.0
@@ -43,7 +43,7 @@ devDependencies:
   postcss-load-config: 3.1.0
   prettier: 2.4.1
   prettier-plugin-svelte: 2.5.0_prettier@2.4.1+svelte@3.44.2
-  prisma: 3.5.0
+  prisma: 3.6.0
   svelte: 3.44.2
   svelte-check: 2.2.10_eda89a9c5504276430bdfb393e9b59cf
   svelte-preprocess: 4.9.8_9625c87c228feb0be59deba19a12ba34
@@ -127,8 +127,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@prisma/client/3.5.0_prisma@3.5.0:
-    resolution: {integrity: sha512-LuaaisknLe9CCfJ1Rtqe9b9knvPgEEcC77OMmWdo3fSanxl5oTDxcH3IIhpULQQlJfZvDcaEXuXNU4dsNF+q1w==}
+  /@prisma/client/3.6.0_prisma@3.6.0:
+    resolution: {integrity: sha512-ycSGY9EZGROtje0iCNsgC5Zqi/ttX2sO7BNMYaLsUMiTlf3F69ZPH+08pRo0hrDfkZzyimXYqeXJlaoYDH1w7A==}
     engines: {node: '>=12.6'}
     requiresBuild: true
     peerDependencies:
@@ -137,16 +137,16 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 3.5.0-38.78a5df6def6943431f4c022e1428dbc3e833cf8e
-      prisma: 3.5.0
-    dev: true
+      '@prisma/engines-version': 3.6.0-24.dc520b92b1ebb2d28dc3161f9f82e875bd35d727
+      prisma: 3.6.0
+    dev: false
 
-  /@prisma/engines-version/3.5.0-38.78a5df6def6943431f4c022e1428dbc3e833cf8e:
-    resolution: {integrity: sha512-X16YmBmj7Omso4ZbkNBe6gPYlNcnwZMUPtXsguCkn+KoMqm3DJD9M4X31gx0Gf13Q44dY3SKPJZUk44/XUj/WA==}
-    dev: true
+  /@prisma/engines-version/3.6.0-24.dc520b92b1ebb2d28dc3161f9f82e875bd35d727:
+    resolution: {integrity: sha512-vtoO2ys6mSfc8ONTWdcYztKN3GBU1tcKBj0aXObyjzSuGwHFcM/pEA0xF+n1W4/0TAJgfoPX2khNEit6g0jtNA==}
+    dev: false
 
-  /@prisma/engines/3.5.0-38.78a5df6def6943431f4c022e1428dbc3e833cf8e:
-    resolution: {integrity: sha512-MqZUrxuLlIbjB3wu8LrRJOKcvR4k3dunKoI4Q2bPfAwLQY0XlpsLZ3TRVW1c32ooVk939p6iGNkaCUo63Et36g==}
+  /@prisma/engines/3.6.0-24.dc520b92b1ebb2d28dc3161f9f82e875bd35d727:
+    resolution: {integrity: sha512-dRClHS7DsTVchDKzeG72OaEyeDskCv91pnZ72Fftn0mp4BkUvX2LvWup65hCNzwwQm5IDd6A88APldKDnMiEMA==}
     requiresBuild: true
     dev: true
 
@@ -2124,13 +2124,13 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /prisma/3.5.0:
-    resolution: {integrity: sha512-WEYQ+H98O0yigG+lI0gfh4iyBChvnM6QTXPDtY9eFraLXAmyb6tf/T2mUdrUAU1AEvHLVzQA5A+RpONZlQozBg==}
+  /prisma/3.6.0:
+    resolution: {integrity: sha512-6SqgHS/5Rq6HtHjsWsTxlj+ySamGyCLBUQfotc2lStOjPv52IQuDVpp58GieNqc9VnfuFyHUvTZw7aQB+G2fvQ==}
     engines: {node: '>=12.6'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@prisma/engines': 3.5.0-38.78a5df6def6943431f4c022e1428dbc3e833cf8e
+      '@prisma/engines': 3.6.0-24.dc520b92b1ebb2d28dc3161f9f82e875bd35d727
     dev: true
 
   /progress/2.0.3:
