@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Store {
+  id      Int    @id @default(autoincrement())
+  name    String
+  baseurl String
+  links   Link[]
+
+  inStockContainer String
+  inStockText      String
+
+  outOfStockContainer String
+  outOfStockText      String
+}
+
+model Link {
+  id      Int     @id @default(autoincrement())
+  storeId Int
+  store   Store   @relation(fields: [storeId], references: [id])
+  checks  Check[]
+}
+
+model Notification {
+  id      Int    @id @default(autoincrement())
+  webhook String
+}
+
+model Check {
+  id     Int  @id @default(autoincrement())
+  linkId Int
+  link   Link @relation(fields: [linkId], references: [id])
+
+  inStock Boolean?
+}
