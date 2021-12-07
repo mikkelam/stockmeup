@@ -1,13 +1,38 @@
+<script lang="ts">
+	const themes = [
+		{ emoji: '🌝', name: 'light' },
+		{ emoji: '🌚', name: 'dark' },
+		{ emoji: '🧁', name: 'cupcake' },
+		{ emoji: '🐝', name: 'bumblebee' },
+		{ emoji: '✳️', name: 'emerald' },
+		{ emoji: '🏢', name: 'corporate' },
+		{ emoji: '🌃', name: 'synthwave' },
+		{ emoji: '👴', name: 'retro' },
+		{ emoji: '🤖', name: 'cyberpunk' },
+		{ emoji: '🌸', name: 'valentine' },
+		{ emoji: '🎃', name: 'halloween' },
+		{ emoji: '🌷', name: 'garden' },
+		{ emoji: '🌲', name: 'forest' },
+		{ emoji: '🐟', name: 'aqua' },
+		{ emoji: '👓', name: 'lofi' },
+		{ emoji: '🖍', name: 'pastel' },
+		{ emoji: '🧚‍♀️', name: 'fantasy' },
+		{ emoji: '📝', name: 'wireframe' },
+		{ emoji: '🏴', name: 'black' },
+		{ emoji: '💎', name: 'luxury' },
+		{ emoji: '🧛‍♂️', name: 'dracula' },
+		{ emoji: '🖨', name: 'cmyk' }
+	];
+</script>
+
 <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
 	<div class="flex-none px-2 mx-2">
-		<span class="text-lg font-bold"> Im-stuck </span>
+		<span class="font-bold"> StockMeUp 🛒</span>
 	</div>
 	<div class="flex-1 px-2 mx-2">
 		<div class="items-stretch hidden lg:flex">
-			<a href="/" class="btn btn-ghost btn-sm rounded-btn"> Home </a>
-			<a class="btn btn-ghost btn-sm rounded-btn"> Portfolio </a>
-			<a class="btn btn-ghost btn-sm rounded-btn"> About </a>
-			<a class="btn btn-ghost btn-sm rounded-btn"> Config </a>
+			<a href="/" class="btn btn-ghost btn-sm rounded-btn">Home</a>
+			<a class="btn btn-ghost btn-sm rounded-btn">Pages</a>
 		</div>
 	</div>
 	<div class="flex-none">
@@ -38,44 +63,14 @@
 				class="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content h-96 w-52 rounded-b-box bg-base-200 text-base-content"
 			>
 				<ul class="p-4 menu compact">
-					<li><a tabindex="0" data-set-theme="light" data-act-class="active">🌝  light</a></li>
-					<li><a tabindex="0" data-set-theme="dark" data-act-class="active">🌚  dark</a></li>
-					<li><a tabindex="0" data-set-theme="cupcake" data-act-class="active">🧁  cupcake</a></li>
-					<li>
-						<a tabindex="0" data-set-theme="bumblebee" data-act-class="active">🐝  bumblebee</a>
-					</li>
-					<li><a tabindex="0" data-set-theme="emerald" data-act-class="active">✳️  Emerald</a></li>
-					<li>
-						<a tabindex="0" data-set-theme="corporate" data-act-class="active">🏢  Corporate</a>
-					</li>
-					<li>
-						<a tabindex="0" data-set-theme="synthwave" data-act-class="active" class="active"
-							>🌃  synthwave</a
-						>
-					</li>
-					<li><a tabindex="0" data-set-theme="retro" data-act-class="active">👴  retro</a></li>
-					<li>
-						<a tabindex="0" data-set-theme="cyberpunk" data-act-class="active">🤖  cyberpunk</a>
-					</li>
-					<li>
-						<a tabindex="0" data-set-theme="valentine" data-act-class="active">🌸  valentine</a>
-					</li>
-					<li>
-						<a tabindex="0" data-set-theme="halloween" data-act-class="active">🎃  halloween</a>
-					</li>
-					<li><a tabindex="0" data-set-theme="garden" data-act-class="active">🌷  garden</a></li>
-					<li><a tabindex="0" data-set-theme="forest" data-act-class="active">🌲  forest</a></li>
-					<li><a tabindex="0" data-set-theme="aqua" data-act-class="active">🐟  aqua</a></li>
-					<li><a tabindex="0" data-set-theme="lofi" data-act-class="active">👓  lofi</a></li>
-					<li><a tabindex="0" data-set-theme="pastel" data-act-class="active">🖍  pastel</a></li>
-					<li><a tabindex="0" data-set-theme="fantasy" data-act-class="active">🧚‍♀️  fantasy</a></li>
-					<li>
-						<a tabindex="0" data-set-theme="wireframe" data-act-class="active">📝  Wireframe</a>
-					</li>
-					<li><a tabindex="0" data-set-theme="black" data-act-class="active">🏴  black</a></li>
-					<li><a tabindex="0" data-set-theme="luxury" data-act-class="active">💎  luxury</a></li>
-					<li><a tabindex="0" data-set-theme="dracula" data-act-class="active">🧛‍♂️  dracula</a></li>
-					<li><a tabindex="0" data-set-theme="cmyk" data-act-class="active">🖨  CMYK</a></li>
+					<!-- svelte-ignore a11y-missing-attribute -->
+					{#each themes as theme}
+						<li>
+							<a tabindex="0" data-set-theme={theme.name} data-act-class="active"
+								>{theme.name}{theme.emoji}</a
+							>
+						</li>
+					{/each}
 				</ul>
 			</div>
 		</div>
